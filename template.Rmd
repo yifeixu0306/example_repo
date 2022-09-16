@@ -28,13 +28,17 @@ The mean is `r round(mean(samp),2)`.
 
 This is going to make a plot! First I generate a dataframe, then use `ggplot` to make a scatterplot.
 
-```{r,}
+```{r}
 plot_df = 
         tibble(
                 x = rnorm(n=1000),
                 y = 1 + 2 * x + rnorm(n = 1000)
         )
 ggplot(plot_df,  aes(x = x, y = y)) + geom_point()
+```
+
+```{r}
+ggplot(plot_df, aes(x=x)) + geom_histogram()
 ```
 
 # Section 4 Learning Assessment
